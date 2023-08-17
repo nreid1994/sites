@@ -4,8 +4,8 @@ import { Article } from "../../../contrib/lib";
 export interface ArticleFeedProps {}
 
 export interface ArticleFeedState {
-  opportunities: Article[];
-  opportunitiesSliced: Article[];
+  articles: Article[];
+  articlesSliced: Article[];
   hasMoreItems: boolean;
   canAddArticle: boolean;
   showAddModal: boolean;

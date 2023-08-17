@@ -8,13 +8,13 @@ import {
 } from "./article_feed_interface";
 import { UserType } from "../../../contrib/lib";
 import { AppUserService } from "../../../contrib/services/app_user_service";
-import { articleService } from "../../services/article_service";
+import { ArticleService } from "../../services/article_service";
 
-export class articleFeed
+export class ArticleFeed
   extends Component<ArticleFeedProps, ArticleFeedState>
   implements ArticleFeedController
 {
-  private readonly articleService = articleService.getInstance();
+  private readonly articleService = ArticleService.getInstance();
   private readonly appUserService = AppUserService.getInstance();
   private unsubscribeFetchResponse = () => {};
   private unsubscribeAddResponse = () => {};
@@ -26,7 +26,7 @@ export class articleFeed
       articles: [],
       articlesSliced: [],
       hasMoreItems: true,
-      canAddarticle: this.appUserService.getUserType() === UserType.STAFF,
+      canAddArticle: this.appUserService.getUserType() === UserType.STAFF,
       showAddModal: false,
       showAddSpinner: false,
     };

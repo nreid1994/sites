@@ -9,7 +9,7 @@ import { ArticleService } from "../../services/article_service";
 import { sanitize } from "isomorphic-dompurify";
 import { AppUserService } from "../../../contrib/services/app_user_service";
 
-export class OrticleView
+export class ArticleView
   extends Component<ArticleViewProps, ArticleViewState>
   implements ArticleViewController
 {
