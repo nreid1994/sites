@@ -22,6 +22,7 @@ export class ModifyUsersForm
     super(props);
     this.state = {
       username: props.user?.username ?? "",
+      fullName: props.user?.fullName ?? "",
       email: props.user?.email ?? "",
       password: "",
       showSpinner: false,
