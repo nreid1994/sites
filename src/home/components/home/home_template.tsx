@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.scss";
 import { HomeController, HomeProps, HomeState } from "./home_interface";
+import { LinkContainer } from "react-router-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
@@ -78,9 +79,11 @@ export function template(
                   </Button>
                 </div>
               </Form>
-              <Card.Link href="" className="d-block text-center">
-                Forgot Password?{" "}
-              </Card.Link>
+              <LinkContainer to="/auth/forgot">
+                <Card.Link href="" className="d-block text-center">
+                  Forgot Password?{" "}
+                </Card.Link>
+              </LinkContainer>
               <Row className="my-2">
                 <div className="d-inline col-5">
                   <hr></hr>
@@ -92,13 +95,15 @@ export function template(
               </Row>
               <div className="d-grid">
                 <Stack className="gap-3">
-                  <Button
-                    type="submit"
-                    variant="outline-secondary"
-                    className="btn-register my-1 mb-3 fw-bold"
-                  >
-                    New to InBDPA? Join now
-                  </Button>
+                  <LinkContainer to="/auth/register">
+                    <Button
+                      type="submit"
+                      variant="outline-secondary"
+                      className="btn-register my-1 mb-3 fw-bold"
+                    >
+                      New to InBDPA? Join now
+                    </Button>
+                  </LinkContainer>
                 </Stack>
               </div>
             </Card.Body>

@@ -1,9 +1,11 @@
+import { ChangeEvent, FormEvent, MouseEvent } from "react";
+
 export interface ProfileAboutProps {
   about: string;
   isEditable: boolean;
 
   // Refresh Profile Parent.
-  //onAboutComplete: (about: string) => void;
+  // onAboutComplete: (about: string) => void;
 }
 
 export interface ProfileAboutState {
@@ -13,6 +15,6 @@ export interface ProfileAboutState {
 export interface ProfileAboutController {
   aboutFormat: (about: string) => string;
   //   onAboutChange: () => void;
-  //   onButtonClick: () => void;
+  // onButtonClick: (event: MouseEvent) => void;
   //   onButtonClose: () => void;
 }
