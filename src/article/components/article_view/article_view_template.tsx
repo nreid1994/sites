@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import remarkGfm from "remark-gfm";
-import "./Article_view.scss";
+import "./article_view.scss";
 import {
   ArticleViewController,
   ArticleViewProps,

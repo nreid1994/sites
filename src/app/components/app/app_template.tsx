@@ -14,6 +14,7 @@ import { UserType } from "../../../contrib/lib";
 import { Admin } from "../../../admin/components/admin/admin";
 import Opportunity from "../../../opportunity/components/opportunity/opportunity";
 import Profile from "../../../profile/components/profile/profile";
+import Article from "../../../article/components/article/article";
 
 export function template(
   this: AppController,
@@ -87,6 +88,26 @@ export function template(
               redirectPath={`/in/${this.url}`}
             >
               <Admin />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/articles"
+          element={
+            <ProtectedRoute isAllowed={this.isLoggedIn} redirectPath={`/`}>
+              <Container className="content-container">
+                <Article />
+              </Container>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/articles/:id"
+          element={
+            <ProtectedRoute isAllowed={this.isLoggedIn} redirectPath={`/`}>
+              <Container className="content-container">
+                <Article />
+              </Container>
             </ProtectedRoute>
           }
         />
