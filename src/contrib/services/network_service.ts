@@ -39,7 +39,7 @@ export class NetworkService {
     headers?: {}
   ): Promise<any> {
     return this.limiter.schedule(() =>
-      fetch(`http://localhost/bdpa_in/server/${path}`, {
+      fetch(`http://localhost/sites/server/${path}`, {
         method: "POST",
         body: JSON.stringify(request),
         headers,
