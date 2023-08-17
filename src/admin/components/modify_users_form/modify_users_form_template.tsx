@@ -58,6 +58,18 @@ export function template(
                 />
                 <Form.Label htmlFor="username">Username</Form.Label>
               </Form.Floating>
+              <Form.Floating className={"mb-3"}>
+                <Form.Control
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="FullName"
+                  value={state.fullName}
+                  onChange={this.onUsernameChange}
+                  required
+                />
+                <Form.Label htmlFor="fullName">FullName</Form.Label>
+              </Form.Floating>
               <Form.Floating className="mb-3">
                 <Form.Control
                   type="email"

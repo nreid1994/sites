@@ -5,6 +5,7 @@ import { Subject, Observable, share, of, switchMap } from "rxjs";
 
 interface AddUserRequest {
   username: string;
+  fullName: string;
   email: string;
   password: string;
   type: UserType;
