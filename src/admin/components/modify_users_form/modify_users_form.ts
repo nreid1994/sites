@@ -22,7 +22,6 @@ export class ModifyUsersForm
     super(props);
     this.state = {
       username: props.user?.username ?? "",
-      fullName: props.user?.fullName ?? "",
       email: props.user?.email ?? "",
       password: "",
       showSpinner: false,
@@ -98,9 +97,6 @@ export class ModifyUsersForm
     const username = !!formData.get("username")
       ? sanitize(formData.get("username")!.toString())
       : "";
-    const fullName = !!formData.get("fullName")
-      ? sanitize(formData.get("fullName")!.toString())
-      : "";
     const password = !!formData.get("password")
       ? sanitize(formData.get("password")!.toString())
       : "";
@@ -124,7 +120,6 @@ export class ModifyUsersForm
     } else {
       this.adminService.feedAddUser({
         username,
-        fullName,
         email,
         type,
         password,

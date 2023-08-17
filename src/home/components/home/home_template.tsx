@@ -1,7 +1,6 @@
 import React from "react";
 import "./home.scss";
 import { HomeController, HomeProps, HomeState } from "./home_interface";
-import { LinkContainer } from "react-router-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
@@ -11,13 +10,6 @@ import Stack from "react-bootstrap/Stack";
 import Image from "react-bootstrap/Image";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import StockImage1 from "../../../static/assets/StockImage1.png";
-import StockImage2 from "../../../static/assets/StockImage2.png";
-import StockImage3 from "../../../static/assets/StockImage3.png";
-import StockImage4 from "../../../static/assets/StockImage4.png";
-import StockImage5 from "../../../static/assets/StockImage5.jpg";
-import StockImage6 from "../../../static/assets/StockImage6.jpg";
-
 
 export function template(
   this: HomeController,
@@ -79,11 +71,9 @@ export function template(
                   </Button>
                 </div>
               </Form>
-              <LinkContainer to="/auth/forgot">
-                <Card.Link href="" className="d-block text-center">
-                  Forgot Password?{" "}
-                </Card.Link>
-              </LinkContainer>
+              <Card.Link href="" className="d-block text-center">
+                Forgot Password?{" "}
+              </Card.Link>
               <Row className="my-2">
                 <div className="d-inline col-5">
                   <hr></hr>
@@ -95,15 +85,13 @@ export function template(
               </Row>
               <div className="d-grid">
                 <Stack className="gap-3">
-                  <LinkContainer to="/auth/register">
-                    <Button
-                      type="submit"
-                      variant="outline-secondary"
-                      className="btn-register my-1 mb-3 fw-bold"
-                    >
-                      New to InBDPA? Join now
-                    </Button>
-                  </LinkContainer>
+                  <Button
+                    type="submit"
+                    variant="outline-secondary"
+                    className="btn-register my-1 mb-3 fw-bold"
+                  >
+                    New to InBDPA? Join now
+                  </Button>
                 </Stack>
               </div>
             </Card.Body>
@@ -111,7 +99,7 @@ export function template(
         </Col>
         <div className="col-6 position-relative">
           <Image
-            src={StockImage3}
+            src="../../../favicon.ico"
             className="position-absolute"
             id="BeginningImage"
             rounded
@@ -313,7 +301,7 @@ export function template(
         </div>
         <div className="col-6 position-relative" id="FirstSectionSecondCol">
           <Image
-            src={StockImage4}
+            src="../../../favicon.ico"
             className="position-absolute"
             id="ConnectionImage"
             rounded
@@ -325,7 +313,7 @@ export function template(
         <div className="col-5" id="FourthSectionCol">
           <div className="position-relative" id="">
             <Image
-              src={StockImage1}
+              src="../../../favicon.ico"
               className="position-absolute"
               id="FourthSectionImage"
               rounded
@@ -348,7 +336,7 @@ export function template(
         <div className="col-5" id="FourthSectionCol">
           <div className="position-relative" id="">
             <Image
-              src={StockImage2}
+              src="../../../favicon.ico"
               className="position-absolute"
               id="FourthSectionImage"
               rounded
@@ -416,7 +404,7 @@ export function template(
         </div>
         <div className="col-6 position-relative" id="FirstSectionSecondCol">
           <Image
-            src={StockImage6}
+            src="../../../favicon.ico"
             className="position-absolute"
             id="PathImage"
             rounded
