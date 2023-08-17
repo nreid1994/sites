@@ -25,6 +25,7 @@ export enum SessionView {
   AUTH = "auth",
   PROFILE = "profile",
   OPPORTUNITY = "opportunity",
+  ARTICLE = "article",
 }
 
 export enum UserProfileSectionType {
@@ -47,6 +48,19 @@ export interface Opportunity {
   title: string;
   contents: string;
   views: number;
+  createdAt: number;
+  updatedAt: number;
+  activeViewers?: number;
+}
+
+export interface Article {
+  article_id: string;
+  creator_id: string;
+  title: string;
+  views: number;
+  sessions: number;
+  contents: string;
+  keywords: string;
   createdAt: number;
   updatedAt: number;
   activeViewers?: number;
