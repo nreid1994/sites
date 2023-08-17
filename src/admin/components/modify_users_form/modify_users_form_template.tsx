@@ -58,6 +58,20 @@ export function template(
                 />
                 <Form.Label htmlFor="username">Username</Form.Label>
               </Form.Floating>
+              <Form.Floating className={"mb-3"}>
+                <Form.Control
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Username"
+                  pattern="[a-zA-Z0-9_\-]*"
+                  title="Username can only contain Alphanumeric Characters. Dashes and Underscores are allowed."
+                  value={state.username}
+                  onChange={this.onUsernameChange}
+                  required
+                />
+                <Form.Label htmlFor="username">Username</Form.Label>
+              </Form.Floating>
               <Form.Floating className="mb-3">
                 <Form.Control
                   type="email"
