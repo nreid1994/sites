@@ -1,4 +1,5 @@
 import { User } from "../../../contrib/lib";
+import { UserType } from "../../../contrib/lib";
 
 export interface ProfileTopProps {
   user: User;
