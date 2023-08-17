@@ -34,6 +34,18 @@ function get_users_api($updatedAfter, $after) {
     return bdpa_fetch($endpoint, "GET");
 }
 
+function get_articles_api($updatedAfter, $after) {
+    $endpoint = "articles";
+
+    if (isset($updatedAfter) || isset($after)) {
+        if (isset($updatedAfter) && !isset($after)) $endpoint.="?updatedAfter={$updatedAfter}";
+        else if(!isset($updatedAfter) && isset($after)) $endpoint.="?after={$after}";
+        else $endpoint.="?updatedAfter={$updatedAfter}&after={$after}";
+    }
+
+    return bdpa_fetch($endpoint, "GET");
+}
+
 function get_opportunities_api($updatedAfter, $after) {
     $endpoint = "opportunities";
 

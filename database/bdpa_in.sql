@@ -25,6 +25,18 @@ CREATE TABLE `opportunities` (
   `opportunity_id` varchar(200) NOT NULL PRIMARY KEY,
   `creator_id` varchar(200) NOT NULL,
   `title` mediumtext NOT NULL,
+  `views` varchar(200) NOT NULL,
+  `sessions` varchar(200) NOT NULL,
+  `contents` mediumtext NOT NULL,
+  `keywords` varchar(200) NOT NULL,
+  `createdAt` varchar(200) NOT NULL,
+  `updatedAt` varchar(200) NOT NULL
+);
+
+CREATE TABLE `opportunities` (
+  `opportunity_id` varchar(200) NOT NULL PRIMARY KEY,
+  `creator_id` varchar(200) NOT NULL,
+  `title` mediumtext NOT NULL,
   `contents` mediumtext NOT NULL,
   `views` varchar(200) NOT NULL,
   `createdAt` varchar(200) NOT NULL,

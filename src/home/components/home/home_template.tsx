@@ -28,7 +28,7 @@ export function template(
   return (
     <>
       <div className="row">
-        <Col className="col-5">
+        <Col className="col-6">
           <Card className="card border-0 rounded-0" id="LoginCard">
             <Card.Body className="px-4 py-2">
               <Card.Title
