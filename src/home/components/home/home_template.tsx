@@ -10,6 +10,13 @@ import Stack from "react-bootstrap/Stack";
 import Image from "react-bootstrap/Image";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import StockImage1 from "../../../static/assets/StockImage1.png";
+import StockImage2 from "../../../static/assets/StockImage2.png";
+import StockImage3 from "../../../static/assets/StockImage3.png";
+import StockImage4 from "../../../static/assets/StockImage4.png";
+import StockImage5 from "../../../static/assets/StockImage5.jpg";
+import StockImage6 from "../../../static/assets/StockImage6.jpg";
+
 
 export function template(
   this: HomeController,
@@ -99,7 +106,7 @@ export function template(
         </Col>
         <div className="col-6 position-relative">
           <Image
-            src="../../../favicon.ico"
+            src={StockImage3}
             className="position-absolute"
             id="BeginningImage"
             rounded
@@ -301,7 +308,7 @@ export function template(
         </div>
         <div className="col-6 position-relative" id="FirstSectionSecondCol">
           <Image
-            src="../../../favicon.ico"
+            src={StockImage4}
             className="position-absolute"
             id="ConnectionImage"
             rounded
@@ -313,7 +320,7 @@ export function template(
         <div className="col-5" id="FourthSectionCol">
           <div className="position-relative" id="">
             <Image
-              src="../../../favicon.ico"
+              src={StockImage1}
               className="position-absolute"
               id="FourthSectionImage"
               rounded
@@ -336,7 +343,7 @@ export function template(
         <div className="col-5" id="FourthSectionCol">
           <div className="position-relative" id="">
             <Image
-              src="../../../favicon.ico"
+              src={StockImage2}
               className="position-absolute"
               id="FourthSectionImage"
               rounded
@@ -404,7 +411,7 @@ export function template(
         </div>
         <div className="col-6 position-relative" id="FirstSectionSecondCol">
           <Image
-            src="../../../favicon.ico"
+            src={StockImage6}
             className="position-absolute"
             id="PathImage"
             rounded
