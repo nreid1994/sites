@@ -32,7 +32,7 @@ export function template(
         <Modal.Body>
           <Form.Floating className="mb-3">
             <Form.Select id="type" name="type" required>
-              {this.promotions.map((type, index) => {
+              {this.promotions_demotions.map((type, index) => {
                 return (
                   <option value={type} selected={!index} key={type}>
                     {type.toLocaleUpperCase()}

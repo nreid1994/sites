@@ -70,6 +70,7 @@ export function template(
           </Card>
         </Col>
       </Row>
+
       <Row className='col-12'>
         <Col className='col-2 mt-2'>
           <Card>

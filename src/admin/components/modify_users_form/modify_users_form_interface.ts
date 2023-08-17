@@ -21,7 +21,7 @@ interface PasswordStrength {
 
 export interface ModifyUsersFormController {
   passwordStrength: PasswordStrength;
-  promotions: UserType[];
+  promotions_demotions: UserType[];
   onUsernameChange: (event: ChangeEvent) => void;
   onPasswordChange: (event: ChangeEvent) => void;
   onEmailChange: (event: ChangeEvent) => void;

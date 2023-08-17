@@ -173,13 +173,13 @@ export class ModifyUsersForm
     return this.getPasswordStrength(this.state.password);
   }
 
-  get promotions() {
+  get promotions_demotions() {
     if (!this.props.user || this.props.user.type === UserType.INNER) {
       return [UserType.INNER, UserType.STAFF, UserType.ADMINISTRATOR];
     }
 
-    if (this.props.user.type === UserType.STAFF) {
-      return [UserType.STAFF, UserType.ADMINISTRATOR];
+    if (!this.props.user || this.props.user.type === UserType.STAFF) {
+      return [UserType.INNER, UserType.STAFF, UserType.ADMINISTRATOR];
     }
 
     return [UserType.ADMINISTRATOR];

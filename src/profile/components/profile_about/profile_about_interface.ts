@@ -15,6 +15,6 @@ export interface ProfileAboutState {
 export interface ProfileAboutController {
   aboutFormat: (about: string) => string;
   //   onAboutChange: () => void;
-  // onButtonClick: (event: MouseEvent) => void;
+  //   onButtonClick: (event: MouseEvent) => void;
   //   onButtonClose: () => void;
 }
