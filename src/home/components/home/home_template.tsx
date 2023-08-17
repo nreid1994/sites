@@ -9,6 +9,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 import Image from "react-bootstrap/Image";
+import Spinner from "react-bootstrap/Spinner";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import StockImage1 from "../../../static/assets/StockImage1.png";
@@ -75,7 +76,7 @@ export function template(
                     variant="primary"
                     className="btn-login fw-bold"
                   >
-                    Sign In
+                    Sign In {state.showSpinner ? <Spinner /> : null}
                   </Button>
                 </div>
               </Form>
