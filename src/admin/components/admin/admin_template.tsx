@@ -15,8 +15,6 @@ import { Stats } from "../stats/stats";
 import { Impersonation } from "../impersonation/impersonation";
 import { ForceLogout } from "../force_logout/force_logout";
 import { ModifyUsers } from "../modify_users/modify_users";
-import { DeleteUser } from "../delete_user/delete_user";
-import { User } from '../../../contrib/lib';
 
 export function modify_users_template(
   controller: AdminController,
@@ -61,15 +59,6 @@ export function template(
                   href="#"
                   onClick={this.onModifyUsersClick}
                   className="admin_sidebar_links"
-
-                  >
-                  Delete User
-                </Nav.Link>
-                <Nav.Link
-                  href="#"
-                  onClick={this.onModifyUsersClick}
-                  className="admin_sidebar_links"
-                  
                 >
                   Modify Users
                 </Nav.Link>

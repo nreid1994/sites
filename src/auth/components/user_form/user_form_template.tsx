@@ -37,16 +37,6 @@ export function template(
         </Form.Floating>
         <Form.Floating className={"mb-3"}>
           <Form.Control
-            type="text"
-            id="fullName"
-            name="fullName"
-            placeholder="fullName"
-            required
-          />
-          <Form.Label htmlFor="fullName">FullName</Form.Label>
-        </Form.Floating>
-        <Form.Floating className={"mb-3"}>
-          <Form.Control
             type="password"
             name="password"
             id="password"

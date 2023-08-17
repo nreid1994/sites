@@ -80,7 +80,6 @@ export class UserForm
 
     const formData = new FormData(event.target as HTMLFormElement);
     const username = sanitize(formData.get("username")?.toString() ?? "");
-    const fullName = sanitize(formData.get("fullName")?.toString() ?? "");
     const email = sanitize(formData.get("email")?.toString() ?? "");
     const password = sanitize(formData.get("password")?.toString() ?? "");
 
@@ -91,7 +90,6 @@ export class UserForm
 
     this.authService.feedRegister({
       username,
-      fullName,
       email,
       password,
       type: UserType.INNER,

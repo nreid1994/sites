@@ -8,7 +8,6 @@ export interface ModifyUsersFormProps {
 
 export interface ModifyUsersFormState {
   username: string;
-  fullName: string;
   password: string;
   email: string;
   showSpinner: boolean;
