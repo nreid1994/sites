@@ -35,6 +35,9 @@ export function template(
           <Card.Title className="fs-1 m-0 bolded">
             {props.user.username}
           </Card.Title>
+          <Card.Title className="m-0 fw-light">
+            {props.user.fullName}
+          </Card.Title>
           <Card.Text className="fs-4 m-0">{props.user.type}</Card.Text>
           <Card.Text className="fs-5 m-0">
             Url: {`/in/${props.user.url}`}
