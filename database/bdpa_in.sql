@@ -21,7 +21,7 @@ CREATE TABLE `connections` (
   FOREIGN KEY(connection_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE `opportunities` (
+CREATE TABLE `articles` (
   `opportunity_id` varchar(200) NOT NULL PRIMARY KEY,
   `creator_id` varchar(200) NOT NULL,
   `title` mediumtext NOT NULL,
