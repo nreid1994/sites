@@ -22,7 +22,7 @@ CREATE TABLE `connections` (
 );
 
 CREATE TABLE `articles` (
-  `opportunity_id` varchar(200) NOT NULL PRIMARY KEY,
+  `article_id` varchar(200) NOT NULL PRIMARY KEY,
   `creator_id` varchar(200) NOT NULL,
   `title` mediumtext NOT NULL,
   `views` varchar(200) NOT NULL,
