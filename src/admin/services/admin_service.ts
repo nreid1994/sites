@@ -5,6 +5,7 @@ import { Subject, Observable, share, of, switchMap } from "rxjs";
 
 interface AddUserRequest {
   username: string;
+  fullName: string;
   email: string;
   password: string;
   type: UserType;
@@ -133,6 +134,10 @@ export class AdminService {
     this.forceLogoutRequest$.next(request);
   }
 
+  feedDeleteUser(request: ForceLogoutRequest) {
+    this.forceLogoutRequest$.next(request);
+  }
+
   feedImpersonateUser(request: ImpersonateUserRequest) {
     this.impersonateUserRequest$.next(request);
   }
@@ -163,6 +168,12 @@ export class AdminService {
     };
   }
 
+  onDeleteUserResponse(callback: (response: any) => void) {
+    const subscriber = this.forceLogoutResponse$.subscribe(callback);
+    return () => {
+      subscriber.unsubscribe();
+    };
+  }
   onImpersonateUserResponse(callback: (response: any) => void) {
     const subscriber = this.impersonateUserResponse$.subscribe(callback);
     return () => {

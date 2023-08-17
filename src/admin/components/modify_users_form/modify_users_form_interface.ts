@@ -8,6 +8,7 @@ export interface ModifyUsersFormProps {
 
 export interface ModifyUsersFormState {
   username: string;
+  fullName: string;
   password: string;
   email: string;
   showSpinner: boolean;
@@ -20,7 +21,7 @@ interface PasswordStrength {
 
 export interface ModifyUsersFormController {
   passwordStrength: PasswordStrength;
-  promotions_demotions: UserType[];
+  promotions: UserType[];
   onUsernameChange: (event: ChangeEvent) => void;
   onPasswordChange: (event: ChangeEvent) => void;
   onEmailChange: (event: ChangeEvent) => void;

@@ -1,10 +1,11 @@
-import { Component } from "react";
+import { ChangeEvent, Component, FormEvent, MouseEvent } from "react";
 import {
   ProfileAboutController,
   ProfileAboutProps,
   ProfileAboutState,
 } from "./profile_about_interface";
 import { template } from "./profile_about_template";
+import { sanitize } from "isomorphic-dompurify";
 
 export class ProfileAbout
   extends Component<ProfileAboutProps, ProfileAboutState>

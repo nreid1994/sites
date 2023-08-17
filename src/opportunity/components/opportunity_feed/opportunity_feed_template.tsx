@@ -29,14 +29,6 @@ export function template(
           </Button>
         </div>
       )}
-      {state.canAddOpportunity2 && (
-        <div className="d-flex justify-content-end">
-          <Button variant="success" onClick={this.onAddButtonClick}>
-            Add Opportunity
-            <i className="fa fa-plus ms-2" />
-          </Button>
-        </div>
-      )}
       <Card className="card border-0 mb-5">
         <Card.Title as="h5" className="text-center mb-5 fw-light fs-5">
           Opportunities!

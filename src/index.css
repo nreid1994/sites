@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background: white;
+  background: linear-gradient(to right, #0062e6, #33aeff);
   position: relative;
   height: auto;
   min-height: 100% !important;

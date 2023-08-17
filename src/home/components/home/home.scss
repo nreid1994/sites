@@ -1,5 +1,5 @@
 body {
-  background: white;
+  background-color: white;
 }
 
 #LoginCard {
@@ -19,7 +19,6 @@ body {
   margin-top: -14rem;
   left: 50%;
   margin-left: -16rem;
-  max-width:70%
 }
 
 #DarkSection {
@@ -54,6 +53,7 @@ body {
 }
 
 #WhiteSection {
+  background-color:white;
   padding-top: 4rem;
   padding-left: 13.5rem;
   padding-bottom: 4rem;
@@ -99,9 +99,6 @@ body {
   padding-top: 16rem;
   padding-left: 13.5rem;
   padding-bottom: 16rem;
-}
-
-#WhitePathSection {
 }
 
 #PathCol {
@@ -158,7 +155,7 @@ body {
 }
 
 .landing_image_near_footer {
-  background-image: url(../../../static/assets/BDPA.png);
+  background-image: url(../../../static/assets/StockImage7.avif);
   background-size: 100%;
   min-height: 840px;
   padding-top: 60px;

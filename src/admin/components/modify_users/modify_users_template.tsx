@@ -47,7 +47,7 @@ export function template(
                 next={this.fetchUsersFeed}
                 hasMore={state.hasMoreItems}
                 loader={<Spinner />}
-                height={250}
+                height={500}
               >
                 {state.usersSliced.map((item, index) => (
                   <ListGroupItem

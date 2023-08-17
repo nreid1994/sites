@@ -32,7 +32,7 @@ export function template(
         <Modal.Body>
           <Form.Floating className="mb-3">
             <Form.Select id="type" name="type" required>
-              {this.promotions_demotions.map((type, index) => {
+              {this.promotions.map((type, index) => {
                 return (
                   <option value={type} selected={!index} key={type}>
                     {type.toLocaleUpperCase()}
@@ -57,6 +57,18 @@ export function template(
                   required
                 />
                 <Form.Label htmlFor="username">Username</Form.Label>
+              </Form.Floating>
+              <Form.Floating className={"mb-3"}>
+                <Form.Control
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="FullName"
+                  value={state.fullName}
+                  onChange={this.onUsernameChange}
+                  required
+                />
+                <Form.Label htmlFor="fullName">FullName</Form.Label>
               </Form.Floating>
               <Form.Floating className="mb-3">
                 <Form.Control

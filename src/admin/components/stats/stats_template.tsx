@@ -7,6 +7,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import { Spinner } from "../../../contrib/components/spinner/spinner";
+import { LinkContainer } from "react-router-bootstrap";
+import { ArrowDown } from "react-bootstrap-icons";
 
 export function template(
   this: StatsController,
@@ -68,7 +70,6 @@ export function template(
           </Card>
         </Col>
       </Row>
-
       <Row className='col-12'>
         <Col className='col-2 mt-2'>
           <Card>
@@ -144,5 +145,6 @@ export function template(
         </Col>
       </Row>
     </Container>
+    
   );
 }

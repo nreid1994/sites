@@ -27,7 +27,6 @@ export class OpportunityFeed
       opportunitiesSliced: [],
       hasMoreItems: true,
       canAddOpportunity: this.appUserService.getUserType() === UserType.STAFF,
-      canAddOpportunity2: this.appUserService.getUserType() === UserType.ADMINISTRATOR,
       showAddModal: false,
       showAddSpinner: false,
     };

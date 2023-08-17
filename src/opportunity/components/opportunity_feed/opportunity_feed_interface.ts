@@ -8,7 +8,6 @@ export interface OpportunityFeedState {
   opportunitiesSliced: Opportunity[];
   hasMoreItems: boolean;
   canAddOpportunity: boolean;
-  canAddOpportunity2: boolean;
   showAddModal: boolean;
   showAddSpinner: boolean;
 }
