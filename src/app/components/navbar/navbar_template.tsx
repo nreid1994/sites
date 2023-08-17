@@ -8,7 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
 import Col from "react-bootstrap/Col";
 import InputGroup from "react-bootstrap/InputGroup";
-import { Briefcase, Search, PersonBadge } from "react-bootstrap-icons";
+import { Briefcase, Search, PersonBadge, Newspaper } from "react-bootstrap-icons";
 
 import "./navbar.scss";
 import { NavbarController, NavbarProps, NavbarState } from "./navbar_interface";
@@ -52,6 +52,14 @@ export function template(
           </Form>
           {this.userType !== UserType.GUEST ? (
             <>
+              <LinkContainer to="/articles">
+                <Nav.Link>
+                  <div className="navLockup me-3">
+                    <Newspaper className="icon mx-auto" />
+                    <span className="text">Articles</span>
+                  </div>
+                </Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/opportunities">
                 <Nav.Link>
                   <div className="navLockup me-3">
