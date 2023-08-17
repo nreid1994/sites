@@ -19,6 +19,7 @@ function generate_salt_and_key($password, $user_salt = null) {
 
 function create_user($user_data) {
     $username = $user_data->username;
+    $fullName = $user_data->fullName;
     $password = $user_data->password;
     $email = $user_data->email;
     $type = $user_data->type;
@@ -26,6 +27,7 @@ function create_user($user_data) {
     $credentials = generate_salt_and_key($password);
     $result = bdpa_fetch("users", "POST", array(
         "username" => $username,
+        "fullName" => $fullName,
         "email" => $email,
         "type" => $type,
         "salt" => $credentials->salt,
@@ -39,6 +41,7 @@ function create_user($user_data) {
     $stmt = $conn->prepare("INSERT INTO `users` (
         user_id, 
         username,
+        fullname,
         email,
         salt,
         views,
@@ -46,14 +49,15 @@ function create_user($user_data) {
         url,
         createdAt,
         updatedAt
-        ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ");
     if(!$stmt) return $conn->error;
     
     $stmt->bind_param(
-        "ssssissii", 
+        "sssssissii", 
         $user->user_id,
         $user->username,
+        $user->fullName,
         $user->email,
         $user->salt,
         $user->views,
