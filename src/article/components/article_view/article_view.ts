@@ -58,7 +58,7 @@ export class ArticleView
           const error: string = response.error;
           if (error.includes(this.props.id)) {
             alert(`Article ${this.props.id} Doesn't Exist`);
-            window.location.href = "/opportunities";
+            window.location.href = "/articles";
             return;
           }
 
@@ -95,7 +95,7 @@ export class ArticleView
         this.setState({
           article: response.article,
           canModifyArticle:
-            this.appUserService.getUserID() === response.orticle.creator_id,
+            this.appUserService.getUserID() === response.article.creator_id,
           showEditModal: false,
         });
       }
@@ -107,7 +107,7 @@ export class ArticleView
           const error: string = response.error;
           if (error.includes(this.props.id)) {
             alert(`Article ${this.props.id} Doesn't Exist`);
-            window.location.href = "/opportunities";
+            window.location.href = "/articles";
             return;
           }
 
@@ -116,7 +116,7 @@ export class ArticleView
         }
 
         alert("Article Successfully Deleted!");
-        window.location.href = "/opportunities";
+        window.location.href = "/articles";
       }
     );
 
@@ -169,7 +169,7 @@ export class ArticleView
       this.articleService.feedDelete({
         article_id: this.props.id,
       });
-      window.location.href = "/opportunities";
+      window.location.href = "/articles";
     }
   };
 
