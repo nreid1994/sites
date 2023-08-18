@@ -7,7 +7,6 @@ import {
 } from "./profile_top_interface";
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
 
 export function template(
   this: ProfileTopController,
